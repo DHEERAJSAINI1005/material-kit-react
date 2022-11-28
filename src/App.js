@@ -5,7 +5,7 @@ import ThemeProvider from './theme';
 // components
 import ScrollToTop from './components/scroll-to-top';
 import { StyledChart } from './components/chart';
-
+import './assets/styles/index.scss';
 // ----------------------------------------------------------------------
 
 export default function App() {
@@ -17,3 +17,4 @@ export default function App() {
     </ThemeProvider>
   );
 }
+ 

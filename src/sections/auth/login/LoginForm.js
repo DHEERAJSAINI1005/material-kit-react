@@ -8,23 +8,40 @@ import Iconify from '../../../components/iconify';
 
 // ----------------------------------------------------------------------
 
+const initialState = {
+  email:null,
+  password: null,
+};
+
+
 export default function LoginForm() {
   const navigate = useNavigate();
-
+ 
   const [showPassword, setShowPassword] = useState(false);
+  const [data, setData] = useState({ ...initialState });
 
-  const handleClick = () => {
-    navigate('/dashboard', { replace: true });
+  const handleChange = (key,val) =>{
+    setData({
+      ...data,
+      [key]: val,
+    });
+  }
+
+  const handleSubmit = () => {
+    // navigate('/dashboard', { replace: true });
   };
-
   return (
     <>
       <Stack spacing={3}>
-        <TextField name="email" label="Email address" />
+        <TextField name="email"
+         label="Email address"
+         onChange={handleChange}
+         required/>
 
         <TextField
           name="password"
           label="Password"
+          required
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
@@ -45,7 +62,7 @@ export default function LoginForm() {
         </Link>
       </Stack>
 
-      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleSubmit}>
         Login
       </LoadingButton>
     </>

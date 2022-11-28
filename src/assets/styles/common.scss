@@ -1,0 +1,379 @@
+// Commonly used styles to be here
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  /* font-family: 'poppins Regular'; */
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  &.nav-guest {
+    background: lightgreen;
+  }
+
+  &.nav-user {
+    background: lightskyblue;
+  }
+
+  &.nav-admin {
+    background: lightblue;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    padding: 10px;
+    width: 100%;
+
+    .nav__buttons {
+      margin-left: auto;
+    }
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 0 50px;
+    padding: 0;
+    width: 100%;
+  }
+}
+.transition-group {
+  position: relative;
+}
+
+section.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.carousel-item-show {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 310px;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  .next_btn {
+    margin-top: auto;
+  }
+}
+
+.carousel-item-show.fade-exit {
+  position: absolute;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.carousel-item-show.slideleft-exit {
+  position: absolute;
+}
+
+.slideleft-enter {
+  //opacity: 0.01;
+  transform: translate(100%, 0);
+}
+
+.slideleft-enter.slideleft-enter-active {
+  //opacity: 1;
+  transform: translate(0, 0);
+  transition: .6s ease-in-out;
+}
+
+.slideleft-exit {
+  //opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slideleft-exit.slideleft-exit-active {
+  //opacity: 0.01;
+  transform: translate(-100%, 0);
+  transition: .6s ease-in-out;
+}
+
+
+.carousel-item-show.slideleftfade-exit {
+  position: absolute;
+}
+
+.slideleftfade-enter {
+  opacity: 0.01;
+  transform: translate(100%, 0);
+}
+
+.slideleftfade-enter.slideleftfade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: .3s ease-in-out;
+}
+
+.slideleftfade-exit {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slideleftfade-exit.slideleftfade-exit-active {
+  opacity: 0.01;
+  transform: translate(-100%, 0);
+  transition: .3s ease-in-out;
+}
+
+
+.carousel-item-show.slidetopfade-exit {
+  position: absolute;
+}
+
+.slidetopfade-enter {
+  opacity: 0.01;
+  transform: translate(0, 100%);
+}
+
+.slidetopfade-enter.slidetopfade-enter-active {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition: .3s ease-in-out;
+}
+
+.slidetopfade-exit {
+  opacity: 0.01;
+  transform: translate(0, 0);
+}
+
+.slidetopfade-exit.slideleftfade-exit-active {
+  opacity: 0.01;
+  transform: translate(0, -100%);
+  transition: .3s ease-in-out;
+}
+
+
+.carousel-item-show.slideright-exit {
+  position: absolute;
+}
+
+.slideright-enter {
+  //opacity: 0.01;
+  transform: translate(-100%, 0);
+}
+
+.slideright-enter.slideright-enter-active {
+  //opacity: 1;
+  transform: translate(0, 0);
+  transition: .6s ease-in-out;
+}
+
+.slideright-exit {
+  //opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slideright-exit.slideright-exit-active {
+  //opacity: 0.01;
+  transform: translate(100%, 0);
+  transition: .6s ease-in-out;
+}
+
+.html-v2 .submit_case_form {
+  .ant-input-search {
+    .ant-input-group {
+      .ant-input {
+        border-right: none !important;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  .ant-input-group-addon {
+    background: transparent !important;
+
+    button {
+      height: 40px;
+      border: 1px solid #d1d1d1 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 0 5px 5px 0 !important;
+      padding: 11px 10px !important;
+    }
+  }
+}
+
+.html-v1 .submit_case_form {
+  .ant-input-search {
+    .ant-input-group {
+      .ant-input {
+        border-right: none !important;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+
+  .ant-input-group-addon{
+    background: transparent !important;
+
+    button {
+      height: 100px;
+      border: 1px solid #d1d1d1 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      border-radius: 0 5px 5px 0 !important;
+      padding: 11px 10px !important;
+      background-color: red !important;
+    }
+  }
+}
+
+.ant-select.no-value {
+  .ant-select-selector {
+    .ant-select-selection-item {
+      color: #d1d1d1 !important;
+    }
+  }
+}
+
+.ant-select-selector {
+  height: initial !important;
+  padding: 6px 15px !important;
+  border-radius: 5px !important;
+}
+
+.date-picker-style {
+  padding: 10px 15px;
+  border-radius: 5px;
+
+  &.all {
+    width: 100%;
+
+    &.landing {
+      padding: 1px 15px;
+
+      input {
+        margin: 0;
+      }
+    }
+  }
+
+}
+
+.ant-input {
+  font-size: inherit !important;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+}
+
+.title_link {
+  margin: 0 .5em;
+  font-size: .7em;
+}
+
+.read-only-fields {
+  font-size: 14px;
+}
+
+.text-green {
+  color: #2cba00 !important;
+}
+
+.text-red {
+  color: #ff0e0e !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.w0h0 {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.calendar_section_main {
+  border: 1px solid #b8b8b8;
+  padding: 50px;
+  margin: 20px 0;
+}
+
+.submit_btn_style3 {
+  font-family: 'poppinssemibold';
+  border: 1px solid #dddddd;
+  padding: 5px 28px;
+  font-size: 1.250em;
+  color: #fff;
+  background-color: #ff6442;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px 0px #e7e7e7;
+  transition: all ease 0.5s;
+  white-space: nowrap;
+}
+
+.ant-notification-topRight {
+  
+  z-index: 999999 !important;
+}
+.case_info_form_broker_cases{
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    width: 100%;
+    height: 32px !important;
+    padding: 0 11px !important;
+  }
+
+}
+.submit_case_form .user_notes_accordion {
+  width: 100%;
+  font-weight: bold;
+  color: #1e1e43;
+  padding: 0;
+  font-size: 19px; 
+}

@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-// @mui
 import { styled } from '@mui/material/styles';
 import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
 // hooks
@@ -58,19 +57,20 @@ export default function LoginPage() {
           }}
         />
 
-        {mdUp && (
+        {/* {mdUp && (
           <StyledSection>
             <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
               Hi, Welcome Back
             </Typography>
             <img src="/assets/illustrations/illustration_login.png" alt="login" />
           </StyledSection>
-        )}
+        )} */}
 
         <Container maxWidth="sm">
           <StyledContent>
             <Typography variant="h4" gutterBottom>
-              Sign in to Minimal
+              Sign in 
+              {/* to Minimal */}
             </Typography>
 
             <Typography variant="body2" sx={{ mb: 5 }}>

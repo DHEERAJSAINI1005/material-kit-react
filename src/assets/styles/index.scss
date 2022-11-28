@@ -1,0 +1,24 @@
+// Import 3rd party
+//@import "../bootstrap-4.3.1/bootstrap-grid";
+@import "../fontawesome-5.12.1/scss/fontawesome";
+@import "../fontawesome-5.12.1/scss/solid";
+@import "../fontawesome-5.12.1/scss/regular";
+@import "../fontawesome-5.12.1/scss/brands";
+
+//Calendar
+@import '~react-big-calendar/lib/sass/styles';
+@import '~react-big-calendar/lib/addons/dragAndDrop/styles';
+
+// Import customs
+@import "./variables";
+@import "./colors";
+@import "./common";
+
+// Import html
+@import "style-html";
+@import "style-html-dashboard";
+@import "style-html-new-slides";
+
+@import "./animate.css";
+@import "./animate-custom";
+

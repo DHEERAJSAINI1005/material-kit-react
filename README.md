@@ -38,3 +38,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/minimal-ui-k
 ## Contact us
 
 Email Us: support@minimals.cc
+
+# install npm
+1. npm install
+
