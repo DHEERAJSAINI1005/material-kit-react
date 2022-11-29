@@ -13,7 +13,6 @@ const initialState = {
   password: null,
 };
 
-
 export default function LoginForm() {
   const navigate = useNavigate();
  

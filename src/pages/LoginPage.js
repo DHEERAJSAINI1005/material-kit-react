@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { styled } from '@mui/material/styles';
-import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
+import { Link, Container, Typography, Divider, Stack, Button,Paper } from '@mui/material';
 // hooks
 import useResponsive from '../hooks/useResponsive';
 // components
@@ -8,39 +7,9 @@ import Logo from '../components/logo';
 import Iconify from '../components/iconify';
 // sections
 import { LoginForm } from '../sections/auth/login';
-
-// ----------------------------------------------------------------------
-
-const StyledRoot = styled('div')(({ theme }) => ({
-  [theme.breakpoints.up('md')]: {
-    display: 'flex',
-  },
-}));
-
-const StyledSection = styled('div')(({ theme }) => ({
-  width: '100%',
-  maxWidth: 480,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  boxShadow: theme.customShadows.card,
-  backgroundColor: theme.palette.background.default,
-}));
-
-const StyledContent = styled('div')(({ theme }) => ({
-  maxWidth: 480,
-  margin: 'auto',
-  minHeight: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  flexDirection: 'column',
-  padding: theme.spacing(12, 0),
-}));
-
-// ----------------------------------------------------------------------
+import './style.scss';
 
 export default function LoginPage() {
-  const mdUp = useResponsive('up', 'md');
 
   return (
     <>
@@ -48,7 +17,7 @@ export default function LoginPage() {
         <title> Login | Minimal UI </title>
       </Helmet>
 
-      <StyledRoot>
+      <Paper className='login_paper_main_paper'>
         <Logo
           sx={{
             position: 'fixed',
@@ -57,17 +26,8 @@ export default function LoginPage() {
           }}
         />
 
-        {/* {mdUp && (
-          <StyledSection>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-              Hi, Welcome Back
-            </Typography>
-            <img src="/assets/illustrations/illustration_login.png" alt="login" />
-          </StyledSection>
-        )} */}
-
         <Container maxWidth="sm">
-          <StyledContent>
+          <Paper className="login_page_paper_style">
             <Typography variant="h4" gutterBottom>
               Sign in 
               {/* to Minimal */}
@@ -80,15 +40,15 @@ export default function LoginPage() {
 
             <Stack direction="row" spacing={2}>
               <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:google-fill" color="#DF3E30" width={22} height={22} />
+                <Iconify icon="eva:google-fill" className="login_page_google_icon"/>
               </Button>
 
               <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:facebook-fill" color="#1877F2" width={22} height={22} />
+                <Iconify icon="eva:facebook-fill" className="login_page_facebook_icon"  />
               </Button>
 
               <Button fullWidth size="large" color="inherit" variant="outlined">
-                <Iconify icon="eva:twitter-fill" color="#1C9CEA" width={22} height={22} />
+                <Iconify icon="eva:twitter-fill" className="login_page_twitter_icon"/>
               </Button>
             </Stack>
 
@@ -97,11 +57,11 @@ export default function LoginPage() {
                 OR
               </Typography>
             </Divider>
-
+                                                                              
             <LoginForm />
-          </StyledContent>
+          </Paper>
         </Container>
-      </StyledRoot>
+      </Paper>
     </>
   );
 }
